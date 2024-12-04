@@ -9,6 +9,19 @@ does not affect the accuracy and speed of model inference. Our proposed on-devic
 be applied for industry.
 
 ---
+## 1*. Preparation A: run by Docker (recommend)
+
+(0) Download the modelobfuscator Docker Image:
+
+```
+docker pull zhoumingyigege/modelobfuscator:latest
+```
+
+Note that if it cause permission errors, please try: 
+
+```
+sudo docker pull zhoumingyigege/modelobfuscator:latest
+```
 
 ***If you need the apk dataset.
 Please contact with us by email: ouyangjin334@gmail.com***
