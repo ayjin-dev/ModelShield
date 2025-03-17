@@ -9,18 +9,50 @@ does not affect the accuracy and speed of model inference. Our proposed on-devic
 be applied for industry.
 
 ---
-## 1*. Preparation A: run by Docker (recommend)
+## 1*. The repository structure
 
-(0) Download the modelobfuscator Docker Image:
-
+### 1.1* The preparation of the project data processing:
 ```
-docker pull zhoumingyigege/modelobfuscator:latest
+(0) Core / Downloader / R0Capture / Site-channel -- For the dataset process
 ```
-
-Note that if it cause permission errors, please try: 
-
+### 1.2* The comparison of the model evaluation:
 ```
-sudo docker pull zhoumingyigege/modelobfuscator:latest
+(1) ModelObfuscator / MMGuard -- For the model evaluation
+```
+## 2.* Usage A: run by Docker (recommend)
+For the best pratice of the project, we recommend to run the project by Docker and inspect all the preparation has been done.
+
+(1) Please install the Docker first, and then run the following command:
+```
+(1.1) git clone ModelShield for you device & cd ModelShield
+(1.2) sudo docker pull zhoumingyigege/modelobfuscator:latest // Pull the docker image
+(1.3) sudo docker run -it zhoumingyigege/modelobfuscator:latest /bin/bash
+(1.4) sudo docker run -it zhoumingyigege/modelobfuscator:latest /bin/bash
+```
+(2) Then you can run the following command to check the project:
+```
+(2.1) cd /ModelShield
+(2.2) python3 main.py
+```
+(3) If you want to run the MMGuard, you can run the following command:
+```
+(3.1) cd /ModelShield/MMGuard
+(3.2) python3 main.py
+```
+(4) If you want to run the R0Capture, you can run the following command:
+```
+(4.1) cd /ModelShield/Core/Downloader/R0Capture
+(4.2) python3 main.py
+```
+(5) If you want to run the Site-channel, you can run the following command:
+```
+(5.1) cd /ModelShield/Core/Downloader/Site-channel
+(5.2) python3 main.py
+```
+(6) If you want to run the Downloader, you can run the following command:
+```
+(6.1) cd /ModelShield/Core/Downloader
+(6.2) python3 main.py
 ```
 
 ***If you need the apk dataset.
